@@ -309,7 +309,7 @@ main img {
   height: auto;
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   :root {
     --heading-1-padding-left: 28px;
     --heading-1-decoration-width: 20px;
@@ -329,7 +329,7 @@ main img {
   }
 }
 
-@media (min-width: 900px) {
+@media (width >= 900px) {
   :root {
     --heading-1-padding-left: 40px;
     --heading-1-decoration-width: 24px;
