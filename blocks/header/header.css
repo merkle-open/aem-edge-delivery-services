@@ -14,7 +14,7 @@ header nav {
   width: 100%;
   max-width: 1264px;
   height: var(--nav-height);
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   color: var(--background-color);
   background-color: var(--highlight-background-color);
   font-family: var(--body-font-family);
