@@ -15,4 +15,12 @@ export default function decorate(block) {
   ul.querySelectorAll('img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+
+  // wave cards
+  if (block.classList.contains('wave')) {
+    [...ul.children].forEach((card, i) => {
+      if (!i) return; // skip first card
+      card.classList.add(i % 2 === 0 ? 'card-wave-medium' : 'card-wave-low');
+    });
+  }
 }
