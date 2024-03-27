@@ -1,0 +1,5 @@
+div.fullpage {
+    min-height: calc(100vh - var(--nav-height));
+    display: flex;
+    align-items: center;
+}
