@@ -1,0 +1,84 @@
+:root {
+    --toc-color: #60607D;
+}
+
+.toc > div {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--body-font-size-xs);
+    color: var(--toc-color);
+}
+
+.toc > div > div {
+    display: inline;
+    width: fit-content;
+    position: relative;
+}
+
+.toc > div > div > p:not(:first-of-type) {
+    display: none;
+}
+
+.toc .toc-title h2 {
+    font-size: var(--body-font-size-s);
+    margin-bottom: 30px;
+}
+
+.toc .toc-item {
+    border-top: 2px solid currentcolor;
+    padding-left: 60px;
+    padding-bottom: 1em;
+}
+
+.toc .toc-item p strong a.hash-link {
+    background-color:transparent;
+    color: var(--link-hover-color);
+}
+
+.toc .toc-item::before {
+    position: absolute;
+    top: 1em;
+    left: 20px;
+    font-weight: bold;
+}
+
+.toc .toc-1::before { content: "01" }
+.toc .toc-2::before { content: "02" }
+.toc .toc-3::before { content: "03" }
+.toc .toc-4::before { content: "04" }
+.toc .toc-5::before { content: "05" }
+.toc .toc-6::before { content: "06" }
+.toc .toc-7::before { content: "07" }
+.toc .toc-8::before { content: "08" }
+.toc .toc-9::before { content: "09" }
+.toc .toc-10::before { content: "10" }
+
+@media (width >= 600px) {
+    .toc > div > div > p:not(:first-of-type) {
+        display: initial;
+    }
+}
+
+@media (width >= 900px) {
+    .toc > div {
+        display: flex;
+        align-items: center;
+        flex-direction: unset;
+    }
+
+    .toc > div > div {
+        margin-left: 32px;
+    }
+
+    .toc > div > div:first-of-type {
+        margin-left: unset;
+    }
+
+    .toc .toc-item {
+        padding-left: 40px;
+    }
+
+    .toc .toc-item::before {
+        left: 0;
+    }
+}
