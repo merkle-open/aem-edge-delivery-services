@@ -1,5 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
+import { decorateLangSwitcher } from '../../scripts/scripts.js';
 
 /**
  * loads and decorates the footer
@@ -17,5 +18,15 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
+  // language switcher
+  decorateLangSwitcher(footer.querySelector('ul'));
+
   block.append(footer);
+
+  // tag line
+  block.querySelector('.footer > div > div')
+    .classList.add('footer-tag-line');
+  // social icons
+  block.querySelector('.footer > div > div:last-of-type')
+    .classList.add('footer-social');
 }
