@@ -29,4 +29,17 @@ export default async function decorate(block) {
   // social icons
   block.querySelector('.footer > div > div:last-of-type')
     .classList.add('footer-social');
+
+  // move social elements
+  const footerSocialElement = block.querySelector('.footer-social');
+  footerSocialElement.querySelectorAll('p.button-container').forEach((ele) => {
+    footerSocialElement.appendChild(ele);
+  });
+  footerSocialElement.querySelector('div.default-content-wrapper').remove();
+
+  // remove class button-container and button
+  block.querySelectorAll('p.button-container').forEach((ele) => {
+    ele.classList.remove('button-container');
+    ele.querySelector('a').classList.remove('button');
+  });
 }
