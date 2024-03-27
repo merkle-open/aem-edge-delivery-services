@@ -16,6 +16,24 @@ import {
 const LCP_BLOCKS = []; // add your LCP blocks to the list
 
 /**
+ * Transforms a list into a language switcher dropdown.
+ * @param {HTMLUListElement} list The list element
+ */
+export function decorateLangSwitcher(list) {
+  if (list) {
+    const select = document.createElement('select');
+    [...list.children].forEach(({ textContent }) => {
+      const option = document.createElement('option');
+      option.value = textContent;
+      option.textContent = textContent;
+      select.append(option);
+    });
+    select.className = 'lang-switcher';
+    list.replaceWith(select);
+  }
+}
+
+/**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
  */

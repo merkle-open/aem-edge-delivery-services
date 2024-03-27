@@ -1,14 +1,112 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
+  background-color: var(--highlight-background-color);
+  color: var(--background-color);
   font-size: var(--body-font-size-s);
 }
 
 footer .footer {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+footer .footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .footer > div > div:not(:first-of-type) {
+  margin-left: 20px;
+}
+
+footer .footer h2,
+footer .footer h3,
+footer .footer h4,
+footer .footer h5,
+footer .footer h6 {
+  color: var(--background-color);
 }
 
 footer .footer p {
+  margin: 10px 0;
+  font-size: var(--body-font-size-xs);
+}
+
+footer .footer .footer-tag-line {
+  width: 100%;
+  order: -2;
+  text-align: center;
+  flex-grow: 1;
+}
+
+footer .footer .footer-social {
+  order: -1;
+  width: 100%;
+  flex-grow: 1;
+  margin: 20px 0;
+  display: flex;
+  gap: 0 20px;
+}
+
+footer .footer .footer-social .icon {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px;
   margin: 0;
+  width: 32px;
+  height: 32px;
+  background-color: var(--highlight-color);
+}
+
+footer .footer select {
+  margin: 10px 0 6px -4px;
+  font-weight: normal;
+}
+
+footer .footer a:any-link {
+  color: var(--background-color);
+}
+
+footer .footer h2 {
+  display: inline-block;
+  font-size: var(--heading-font-size-m);
+  line-height: 1;
+  padding-left: 10px;
+}
+
+footer .footer h2::before {
+  border-top-width: 8px;
+  border-left-width: 8px;
+  top: 12px;
+}
+
+@media (width >= 600px) {
+  footer .footer .footer-social {
+    width: 100px;
+    order: unset;
+    flex-grow: unset;
+    flex-wrap: wrap;
+  }
+
+  @media (width >= 1200px) {
+    footer .footer .footer-tag-line {
+      width: initial;
+      order: unset;
+      flex-grow: unset;
+      flex-wrap: wrap;
+    }
+
+    footer .footer h2 {
+      font-size: var(--heading-font-size-xl);
+      line-height: 1.2;
+      padding-left: 24px;
+    }
+
+    footer .footer h2::before {
+      border-top-width: 20px;
+      border-left-width: 20px;
+      top: 18px;
+    }
+  }
 }
