@@ -1,0 +1,70 @@
+.section.form-container h2,
+.section.form-container h3 {
+  margin: 40px 0;
+}
+
+.form input:not([type="checkbox"]),
+.form textarea {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 8px;
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  color: var(--background-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--highlight-background-color);
+  outline: none;
+}
+
+.form textarea {
+  min-height: 10rem;
+}
+
+.form input:not([type="checkbox"]):focus,
+.form textarea:focus {
+  border-bottom-color: var(--highlight-color);
+}
+
+.form input::placeholder {
+  color: currentcolor;
+}
+
+.form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.form label {
+  font-size: var(--body-font-size-s);
+}
+
+.form label a:any-link {
+  color: var(--highlight-color);
+}
+
+
+.form label:empty {
+  display: none;
+}
+
+.form label.required::after {
+  display: none;
+  content: "*";
+  color: var(--highlight-color);
+}
+
+.form input[disabled] + label {
+  opacity: 0.5;
+}
+
+/* highlight form */
+
+main .section.highlight .form input:not([type="checkbox"]),
+main .section.highlight .form textarea {
+  border-bottom-color: var(--background-color);
+}
+
+main .section.highlight .form label a:any-link {
+  color: var(--highlight-color);
+}
