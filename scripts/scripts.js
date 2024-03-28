@@ -50,7 +50,7 @@ function decorateLinks(main) {
     if (!ele.href.startsWith(window.location.origin)) {
       ele.setAttribute('target', '_blank');
     }
-  })
+  });
 }
 
 /**
