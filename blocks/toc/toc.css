@@ -32,7 +32,14 @@
 
 .toc .toc-item p strong a.hash-link {
     background-color:transparent;
-    color: var(--link-hover-color);
+    color: var(--highlight-color);
+}
+
+.toc .toc-item p strong a.hash-link:hover {
+    background-color:transparent;
+    color: var(--highlight-color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 .toc .toc-item::before {

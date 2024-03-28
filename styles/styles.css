@@ -137,12 +137,13 @@ p, dl, ol, ul, pre, blockquote {
 }
 
 a:any-link {
-  color: var(--link-color);
+  color: var(--highlight-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: var(--highlight-color);
+  text-decoration: underline;
 }
 
 code, pre, samp {
