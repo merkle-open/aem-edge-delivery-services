@@ -68,6 +68,11 @@ footer .footer a:any-link {
   color: var(--background-color);
 }
 
+footer .footer a:any-link:hover {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
 footer .footer h2 {
   display: inline-block;
   font-size: var(--heading-font-size-m);
