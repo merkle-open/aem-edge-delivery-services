@@ -14,7 +14,7 @@
   color: var(--background-color);
   background-color: transparent;
   border: none;
-  border-bottom: 3px solid var(--highlight-background-color);
+  border-bottom: 3px solid var(--background-color);
   outline: none;
 }
 
@@ -56,13 +56,6 @@
 
 .form input[disabled] + label {
   opacity: 0.5;
-}
-
-/* highlight form */
-
-main .section.highlight .form input:not([type="checkbox"]),
-main .section.highlight .form textarea {
-  border-bottom-color: var(--background-color);
 }
 
 main .section.highlight .form label a:any-link {
