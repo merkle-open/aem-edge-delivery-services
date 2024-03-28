@@ -33,6 +33,18 @@ export function decorateLangSwitcher(list) {
   }
 }
 
+export function decorateLinkedIcons(spanList) {
+  spanList.forEach((span) => {
+    const { classList, parentNode } = span;
+    const iconName = Array.from(classList)
+      .find((c) => c.startsWith('icon-'))
+      .substring(5);
+    if (parentNode.tagName === 'A') {
+      parentNode.title = iconName;
+    }
+  });
+}
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
