@@ -5,7 +5,7 @@
 .toc > div {
     display: flex;
     flex-direction: column;
-    font-size: var(--body-font-size-xs);
+    font-size: var(--body-font-size-s);
     color: var(--toc-color);
 }
 
@@ -20,7 +20,7 @@
 }
 
 .toc .toc-title h2 {
-    font-size: var(--body-font-size-s);
+    font-size: var(--body-font-size-m);
     margin-bottom: 30px;
 }
 
@@ -30,15 +30,12 @@
     padding-bottom: 1em;
 }
 
-.toc .toc-item p strong a.hash-link {
+.toc .toc-item p a.hash-link {
     background-color:transparent;
-    color: var(--highlight-color);
-}
-
-.toc .toc-item p strong a.hash-link:hover {
-    background-color:transparent;
-    color: var(--highlight-color);
+    color: var(--link-color);
     text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
+    text-decoration-thickness: 2px;
 }
 
 .toc .toc-item::before {
