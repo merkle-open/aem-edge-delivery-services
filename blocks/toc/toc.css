@@ -39,7 +39,6 @@
     background-color:transparent;
     color: var(--highlight-color);
     text-decoration: underline;
-    text-decoration-thickness: 2px;
 }
 
 .toc .toc-item::before {
