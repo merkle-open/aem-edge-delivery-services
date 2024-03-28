@@ -1,6 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { decorateLangSwitcher } from '../../scripts/scripts.js';
+import { decorateLangSwitcher, decorateLinkedIcons } from '../../scripts/scripts.js';
 
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -144,6 +144,9 @@ export default async function decorate(block) {
 
   // language switcher
   decorateLangSwitcher(nav.querySelector('.nav-tools ul'));
+
+  // set icon name as link title
+  decorateLinkedIcons(nav.querySelectorAll('a span.icon'));
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';

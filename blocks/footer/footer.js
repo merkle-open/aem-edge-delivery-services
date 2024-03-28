@@ -1,6 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
-import { decorateLangSwitcher } from '../../scripts/scripts.js';
+import { decorateLangSwitcher, decorateLinkedIcons } from '../../scripts/scripts.js';
 
 /**
  * loads and decorates the footer
@@ -20,6 +20,9 @@ export default async function decorate(block) {
 
   // language switcher
   decorateLangSwitcher(footer.querySelector('ul'));
+
+  // set icon name as link title
+  decorateLinkedIcons(footer.querySelectorAll('a span.icon'));
 
   block.append(footer);
 
