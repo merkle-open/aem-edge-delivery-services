@@ -45,6 +45,14 @@ export function decorateLinkedIcons(spanList) {
   });
 }
 
+function decorateLinks(main) {
+  main.querySelectorAll('a').forEach((ele) => {
+    if (!ele.href.startsWith(window.location.origin)) {
+      ele.setAttribute('target', '_blank');
+    }
+  })
+}
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -97,6 +105,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateLinks(main);
 }
 
 /**
