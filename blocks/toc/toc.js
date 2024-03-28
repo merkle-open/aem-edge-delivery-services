@@ -6,6 +6,7 @@ export default function decorate(block) {
     col.querySelectorAll('a').forEach((a) => {
       if (a.getAttribute('href').charAt(0) === '#') {
         a.classList.add('hash-link');
+        a.classList.remove('button');
       }
     });
   });
