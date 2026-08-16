@@ -1,8 +1,8 @@
 # Merkle Edge Delivery Services Showcase
 
 ## Environments
-- Preview: https://main--aem-edge-delivery-services--merkle-open.hlx.page/
-- Live: https://main--aem-edge-delivery-services--merkle-open.hlx.live/
+- Preview: https://main--aem-edge-delivery-services--merkle-open.aem.page/
+- Live: https://main--aem-edge-delivery-services--merkle-open.aem.live/
 
 ## Installation
 
